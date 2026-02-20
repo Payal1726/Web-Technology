@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart JS Calculator</title>
+    <style>
+        /* CSS: Styling the UI */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .calculator {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+            width: 320px;
+        }
+
+        #display {
+            width: 100%;
+            height: 60px;
+            font-size: 2rem;
+            text-align: right;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            background-color: #444;
+            color: white;
+        }
+
+        button:hover { background-color: #555; }
+        button:active { transform: scale(0.95); }
+
+        .operator { background-color: #f39c12; }
+        .operator:hover { background-color: #e67e22; }
+
+        .equals { background-color: #27ae60; grid-column: span 2; }
+        .equals:hover { background-color: #2ecc71; }
+
+        .clear { background-color: #c0392b; grid-column: span 2; }
+        .clear:hover { background-color: #e74c3c; }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" readonly placeholder="0">
+    <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">AC</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button class="operator" onclick="appendToDisplay('/')">÷</button>
+        
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button class="operator" onclick="appendToDisplay('*')">×</button>
+        
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button class="operator" onclick="appendToDisplay('-')">-</button>
+        
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button class="operator" onclick="appendToDisplay('+')">+</button>
+        
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button class="equals" onclick="calculate()">=</button>
+    </div>
+</div>
+
+<script>
+    // JS: Logic and Validation
+    const display = document.getElementById('display');
+
+    function appendToDisplay(input) {
+        const currentVal = display.value;
+        const lastChar = currentVal.slice(-1);
+        const operators = ['+', '-', '*', '/', '.'];
+
+        // 1. Prevent starting with an operator (except minus)
+        if (currentVal === "" && operators.includes(input) && input !== '-') return;
+
+        // 2. Prevent double operators like "++" or "+*"
+        if (operators.includes(lastChar) && operators.includes(input)) {
+            // Optional: Replace the old operator with the new one
+            display.value = currentVal.slice(0, -1) + input;
+            return;
+        }
+
+        // 3. Prevent multiple decimals in one number
+        if (input === '.') {
+            const parts = currentVal.split(/[\+\-\*\/]/);
+            const lastPart = parts[parts.length - 1];
+            if (lastPart.includes('.')) return;
+        }
+
+        display.value += input;
+    }
+
+    function clearDisplay() {
+        display.value = "";
+    }
+
+    function deleteLast() {
+        display.value = display.value.slice(0, -1);
+    }
+
+    function calculate() {
+        try {
+            // Validation: Don't evaluate if empty or ends with operator
+            const lastChar = display.value.slice(-1);
+            if (display.value === "" || ['+', '-', '*', '/'].includes(lastChar)) return;
+
+            // Using Function() instead of eval() for slightly better security
+            display.value = new Function('return ' + display.value)();
+        } catch (error) {
+            display.value = "Error";
+            setTimeout(clearDisplay, 1500);
+        }
+    }
+</script>
+
+</body>
+</html>
