@@ -1,0 +1,53 @@
+:root {
+    --primary: #6366f1;
+    --success: #22c55e;
+    --error: #ef4444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex; justify-content: center; align-items: center; height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem; border-radius: 12px; width: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h2 { text-align: center; margin-bottom: 1.5rem; color: #333; }
+
+.input-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 5px; font-weight: 600; color: #555; font-size: 0.9rem; }
+
+input {
+    width: 100%; padding: 12px; border: 2px solid #ddd;
+    border-radius: 6px; outline: none; transition: 0.3s;
+}
+
+input:focus { border-color: var(--primary); }
+
+.password-wrapper { position: relative; }
+#togglePassword { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; }
+
+.strength-meter { height: 4px; background: #eee; margin-top: 8px; border-radius: 2px; }
+#strength-bar { height: 100%; width: 0%; transition: 0.4s; border-radius: 2px; }
+
+.error-msg { color: var(--error); font-size: 0.8rem; display: none; margin-top: 5px; }
+.input-group.error .error-msg { display: block; }
+.input-group.error input { border-color: var(--error); }
+.input-group.success input { border-color: var(--success); }
+
+button {
+    width: 100%; padding: 12px; background: var(--primary);
+    color: white; border: none; border-radius: 6px; font-size: 1rem;
+    font-weight: bold; cursor: pointer; margin-top: 10px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}

@@ -3,303 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blooming Joy | Fresh Flowers & Bouquets</title>
-
+    <title>Strict String-Only Form</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        body {
-            background-color: #fff0f5; 
-        }
-        .hero-section {
-           
-            background-image: url('oip.webp');
-            
-            /* Ensures the image covers the entire area */
-            background-size: cover;
-            
-            /* Centers the image */
-            background-position: center;
-            
-            /* Adds a dark overlay so text remains readable */
-            background-color: rgba(255, 255, 255, 0.4);
-            background-blend-mode: overlay;
-
-            padding: 60px; /* Increased padding for better look */
-            text-align: center;
-            border-bottom: 5px solid #e91e63;
-        }
-        .price-table th {
-            background-color: #d81b60;
-            color: white;
-        }
-    </style>
 </head>
 <body>
-
-    <header>
-        <h1 style="font-size: larger;">🌸 Blooming Joy</h1>
-        <p><i>Freshness delivered to your doorstep</i></p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Order Now</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="home" class="hero-section">
-            <h2>Welcome to Nature's Best</h2>
-            <p>We specialize in <span style="color: #c2185b; font-weight: bold;">exotic orchids</span>, roses, and tulips.</p>
-            <hr>
-        </section>
-
-        <section style="padding: 20px; background-color: #fffaf0;">
-    <h3 style="color: #c2185b; border-bottom: 2px solid #e91e63; display: inline-block; padding-bottom: 5px;">Available Categories</h3>
-    
-    <ul style="list-style-type: square; color: #444; line-height: 1.6;">
-        <li style="margin-bottom: 15px;">
-            <b style="color: #d81b60; font-size: 1.1em;">Wedding Bouquets</b><br>
-            <span style="font-size: 0.95em;">
-                Hand-tied bridal masterpieces customized to match your theme. We offer cascading orchids, classic round rose bouquets, and rustic wildflower arrangements.
-            </span>
-        </li>
-
-        <li style="margin-bottom: 15px;">
-            <b style="color: #d81b60; font-size: 1.1em;">Anniversary Specials</b><br>
-            <span style="font-size: 0.95em;">
-                Celebrate your milestones with our "Eternity Collection." Includes heart-shaped red rose arrangements and luxury gold-vase displays for silver and golden jubilees.
-            </span>
-        </li>
-
-        <li style="margin-bottom: 15px;">
-            <b style="color: #d81b60; font-size: 1.1em;">Decoration Services:</b>
-            <span style="font-size: 0.95em; display: block; margin-bottom: 5px;">
-                Complete floral styling for your big events.
-            </span>
+    <div class="container" id="formContainer">
+        <form id="registrationForm">
+            <h2>Create Account</h2>
             
-            <ol style="background-color: #fff; padding: 15px 40px; border-left: 4px solid #e91e63; border-radius: 5px;">
-                <li style="margin-bottom: 10px;">
-                    <b>Stage Decoration:</b> Grand floral backdrops, arches, and hanging floral chandeliers to create a royal look for weddings and receptions.
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <b>Car Decoration:</b> Elegant "Just Married" styling using fresh carnations, ribbons, and net fabrics that won't damage the vehicle paint.
-                </li>
-                <li>
-                    <b>Table Centerpieces:</b> Sophisticated vase arrangements and candle-floral combos perfect for gala dinners and corporate meets.
-                </li>
-            </ol>
-        </li>
-    </ul>
-</section>
-
-        <section id="gallery" style="padding: 40px 20px; background-color: #fff0f5;">
-    <h3 style="text-align: center; color: #880e4f; margin-bottom: 30px;">Our Beautiful Collection</h3>
-    
-    <div class="card-grid">
-        
-        <div class="card">
-            <img src="RedRose.webp" alt="Red Rose">
-            <h4>Red Rose</h4>
-            <p class="price">210</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=400" alt="Pink Tulip">
-            <h4>Pink Tulip</h4>
-            <p class="price">220</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?w=400" alt="Sunflower">
-            <h4>Sunflower</h4>
-            <p class="price">100</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="lightlily.webp" alt="White Lily">
-            <h4>White Lily</h4>
-            <p class="price">180</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="purpleorchid.webp" alt="Orchid">
-            <h4>Purple Orchid</h4>
-            <p class="price">250</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=400" alt="Daisy">
-            <h4>Fresh Daisy</h4>
-            <p class="price">100</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1474557157379-8aa74a6ef541?w=400" alt="Lavender">
-            <h4>Lavender Bunch</h4>
-            <p class="price">140</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="PinkCarnation.webp" alt="Carnation">
-            <h4>Pink Carnation</h4>
-            <p class="price">110</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="whitejasmine.webp" alt="Jasmine">
-            <h4>White Jasmine</h4>
-            <p class="price">160</p>
-            <button>Add to Cart</button>
-        </div>
-
-    </div>
-</section>
-
-      
-
-        <section id="pricing" style="padding: 20px;">
-            <h3>Price List</h3>
-            <table border="1" cellpadding="10" cellspacing="0" class="price-table" width="100%">
-                <tr>
-                    <th>Flower Type</th>
-                    <th>Per Stem</th>
-                    <th>Bouquet (12 pc)</th>
-                </tr>
-                <tr>
-                    <td>Red Roses</td>
-                    <td>210</td>
-                    <td>2520</td>
-                </tr>
-                <tr>
-                    <td>Tulips</td>
-                    <td>120</td>
-                    <td>1440</td>
-                </tr>
-                <tr>
-                    <td>Orchids</td>
-                    <td>250</td>
-                    <td>3000</td>
-                </tr>
-                <tr>
-                    <td>Sunflowers</td>
-                    <td>100</td>
-                    <td>1200</td>
-                </tr>
-                <tr>
-                    <td>Lilies</td>
-                    <td>180</td>
-                    <td>2160</td>
-                </tr>
-
-            </table>
-        </section>
-
-        <section id="contact" style="background-color: #ffeef2; padding: 20px;">
-            <h3>Place Your Order</h3>
-            <form action="/submit_order" method="POST">
-                <label for="cname">Customer Name:</label>
-                <input type="text" id="cname" name="cname" placeholder="John Doe" required><br><br>
-
-                <label for="ddate">Delivery Date:</label>
-                <input type="date" id="ddate" name="ddate"><br><br>
-
-                <label for="flower">Choose Flower:</label>
-                <select id="flower" name="flower">
-                    <option value="rose">Rose</option>
-                    <option value="lily">Lily</option>
-                    <option value="orchid">Orchid</option>
-                    <option value="sunflower">Sunflower</option>
-                    <option value="tulip">Tulip</option>
-                    <option value="Pink carnation">Carnation</option>
-                    <option value="white jasmine">Jasmine</option>
-                    <option value="lavender">Lavender</option>
-                    <option value="daisy">Daisy</option>
-                   
-                </select><br><br>
-
-                <label for="msg">Message for Card:</label><br>
-                <textarea id="msg" name="msg" rows="4" cols="30"></textarea><br><br>
-
-                <button type="submit" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">Confirm Order</button>
-            </form>
-        </section>
-
-        <section id="contact-info" style="padding: 40px 20px; background-color: #fdf2f8;">
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-        
-        <div style="flex: 1; min-width: 300px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-            <h3 style="color: #c2185b; border-bottom: 2px solid #e91e63; padding-bottom: 10px;">Get in Touch</h3>
-            
-            <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px;">
-                📍 <b>Address:</b><br>
-                Blooming Joy Nursery,<br>
-                Near Sanjivani College of Engineering,<br>
-                Kopargaon, Maharashtra - 423603.
-            </p>
-
-            <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px;">
-                📞 <b>Phone:</b><br>
-                <a href="tel:+919876543210" style="text-decoration: none; color: #e91e63;">+91 98765 43210</a>
-            </p>
-
-            <div style="margin-top: 20px;">
-                <p><b>Follow us:</b></p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="https://instagram.com" target="_blank" style="text-decoration: none;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#E1306C" stroke-width="2"/>
-                            <circle cx="12" cy="12" r="3.2" stroke="#E1306C" stroke-width="2"/>
-                            <circle cx="17.5" cy="6.5" r="1.5" fill="#E1306C"/>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/919876543210" target="_blank" style="text-decoration: none;">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2Z" 
-                 stroke="#25D366" stroke-width="2"/>
-          <path d="M16.53 14.96C16.27 14.83 14.99 14.2 14.75 14.11C14.51 14.02 14.33 13.98 14.16 14.24C13.98 14.5 13.48 15.09 13.33 15.27C13.18 15.45 13.03 15.47 12.77 15.34C12.51 15.21 11.67 14.94 10.67 14.05C9.89 13.35 9.36 12.49 9.21 12.23C9.06 11.97 9.19 11.83 9.32 11.7C9.44 11.58 9.59 11.39 9.72 11.24C9.85 11.09 9.9 10.98 9.98 10.8C10.07 10.62 10.02 10.47 9.96 10.35C9.9 10.23 9.4 9 9.19 8.5C8.98 8.01 8.77 8.08 8.61 8.07C8.46 8.07 8.28 8.07 8.1 8.07C7.92 8.07 7.63 8.14 7.39 8.4C7.15 8.66 6.47 9.3 6.47 10.6C6.47 11.9 7.42 13.16 7.55 13.33C7.69 13.51 9.52 16.33 12.32 17.54" 
-              fill="#25D366"/>
-    </svg>
-</a>
-
-                    <a href="https://facebook.com" target="_blank" style="text-decoration: none;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="#1877F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="input-group">
+                <label for="username">Username (Letters Only)</label>
+                <input type="text" id="username" placeholder="e.g. John Doe" autocomplete="off">
+                <small class="error-msg">Numbers are not allowed!</small>
             </div>
-        </div>
 
-        <div style="flex: 1; min-width: 300px; height: 350px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.568478478465!2d74.4795323149179!3d19.89659998662235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc4395c5d0d6d5%3A0x7d0020e6e7392658!2sSanjivani%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1625631234567!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="hello@example.com">
+                <small class="error-msg"></small>
+            </div>
 
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Min 8 characters">
+                    <span id="togglePassword">👁️</span>
+                </div>
+                <div class="strength-meter"><div id="strength-bar"></div></div>
+                <small class="error-msg"></small>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
     </div>
-</section>
-
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px;">
-        <p>&copy; 2026 Blooming Joy Flower Shop.</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
