@@ -1,0 +1,156 @@
+/* ===== Home Page Styles ===== */
+
+.home {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #1a237e;
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Section */
+.section {
+    margin: 36px 0;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: #1a237e;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 6px;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.event-card {
+    background: #f8f9ff;
+    border: 1px solid #d0d5e8;
+    border-radius: 10px;
+    padding: 18px;
+    transition: box-shadow 0.2s;
+}
+
+.event-card:hover {
+    box-shadow: 0 4px 16px rgba(26, 35, 126, 0.12);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.badge {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge-event {
+    background: #1a237e;
+}
+
+.badge-workshop {
+    background: #00796b;
+}
+
+.badge-club {
+    background: #e65100;
+}
+
+.date {
+    font-size: 0.82rem;
+    color: #888;
+}
+
+.event-card h3 {
+    margin: 6px 0 4px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.event-card p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.45;
+}
+
+/* Registration Form */
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 420px;
+}
+
+.reg-form input,
+.reg-form select {
+    padding: 10px 14px;
+    border: 1px solid #c5cae9;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.reg-form input:focus,
+.reg-form select:focus {
+    border-color: #1a237e;
+}
+
+.reg-form button {
+    padding: 10px;
+    background: #1a237e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reg-form button:hover {
+    background: #283593;
+}
+
+.success-msg {
+    margin-top: 10px;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 24px 0 10px;
+    color: #888;
+    font-size: 0.88rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
