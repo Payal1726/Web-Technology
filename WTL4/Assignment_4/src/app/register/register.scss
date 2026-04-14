@@ -1,0 +1,83 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background: url('/assets/register-bg.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px 0;
+}
+
+.register-container {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 50, 150, 0.85);
+    padding: 14px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid rgba(0, 50, 150, 0.6);
+    padding: 24px;
+    background-color: rgba(240, 240, 255, 0.92);
+    border-radius: 0 0 8px 8px;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+td {
+    padding: 8px 10px;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select {
+    padding: 8px 10px;
+    border: 1px solid #7a9fd4;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2a5db0;
+    box-shadow: 0 0 4px rgba(42, 93, 176, 0.3);
+}
+
+button {
+    background-color: #2a5db0;
+    color: white;
+    padding: 10px 28px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1a3d7a;
+    transform: scale(1.03);
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
